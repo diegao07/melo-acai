@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingBag, ArrowRight } from 'lucide-react';
 
 const products = [
   {

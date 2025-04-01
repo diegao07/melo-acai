@@ -1,5 +1,5 @@
 
-import { CheckCircle2, Sparkles, Leaf } from 'lucide-react';
+import { CheckCircle2, Sparkles, Leaf, ArrowRight } from 'lucide-react';
 
 const Benefits = () => {
   const benefits = [
