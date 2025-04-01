@@ -1,38 +1,45 @@
 
-import { MapPin, Phone, ShoppingBag } from 'lucide-react';
+import { MapPin, Clock, ShoppingBag } from 'lucide-react';
 
 const OrderSection = () => {
   return (
-    <section id="pedido" className="py-16 bg-primary text-white">
-      <div className="acai-container">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Peça Agora Mesmo</h2>
+    <section id="pedido" className="py-20 bg-primary text-white">
+      <div className="melo-container">
+        <div className="text-center mb-16 animate-fade-in">
+          <span className="inline-block px-4 py-1 bg-white/20 text-white rounded-full text-sm font-medium mb-4">
+            Peça Agora
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experimente o Melhor Açaí da Cidade</h2>
           <p className="text-lg max-w-2xl mx-auto opacity-90">
-            Faça seu pedido pelo iFood e receba o melhor açaí da cidade no conforto da sua casa!
+            Faça seu pedido pelo iFood e receba o Melo Açaí no conforto da sua casa!
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="order-2 md:order-1">
-            <div className="bg-white text-gray-800 p-6 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-primary mb-6">Estamos no iFood!</h3>
+          <div className="order-2 md:order-1 animate-slide-up">
+            <div className="bg-white text-gray-800 p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-primary mb-6">Faça seu pedido</h3>
               
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-6 h-6 text-[#EA1D2C] flex-shrink-0 mt-1" />
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
                   <div>
-                    <h4 className="font-bold">Nosso Endereço</h4>
-                    <p>Av. das Palmeiras, 1000 - Centro</p>
-                    <p>São Paulo - SP</p>
+                    <h4 className="font-bold text-gray-800 mb-1">Nosso Endereço</h4>
+                    <p className="text-gray-600">Av. das Acácias, 500 - Centro</p>
+                    <p className="text-gray-600">São Paulo - SP</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <Phone className="w-6 h-6 text-[#EA1D2C] flex-shrink-0 mt-1" />
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    <Clock className="w-6 h-6 text-primary" />
+                  </div>
                   <div>
-                    <h4 className="font-bold">Contato</h4>
-                    <p>(11) 95555-5555</p>
-                    <p>contato@acaiify.com.br</p>
+                    <h4 className="font-bold text-gray-800 mb-1">Horário de Funcionamento</h4>
+                    <p className="text-gray-600">Segunda a Sábado: 11h às 22h</p>
+                    <p className="text-gray-600">Domingo: 12h às 20h</p>
                   </div>
                 </div>
               </div>
@@ -48,21 +55,26 @@ const OrderSection = () => {
                   Pedir via iFood
                 </a>
                 <p className="text-sm text-center text-gray-500">
-                  O prazo de entrega pode variar de acordo com a sua localização
+                  Tempo médio de entrega: 30 minutos (dependendo da localização)
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="order-1 md:order-2 relative">
-            <img 
-              src="https://img.freepik.com/free-photo/brazilian-dessert-frozen-acai-fruit-bowl-with-bananas-on-stone-board_123827-21345.jpg" 
-              alt="Açaí delivery" 
-              className="rounded-xl shadow-xl w-full h-[400px] object-cover"
-            />
-            <div className="absolute -bottom-6 right-6 bg-[#EA1D2C] p-5 rounded-lg shadow-lg text-white">
-              <div className="text-xl font-bold mb-1">FRETE GRÁTIS</div>
-              <p className="text-sm">No seu primeiro pedido pelo iFood</p>
+          <div className="order-1 md:order-2 animate-slide-up" style={{animationDelay: '0.2s'}}>
+            <div className="relative">
+              <img 
+                src="https://img.freepik.com/free-photo/acai-smoothie-bowl-with-banana-strawberries-blueberries-side-view_141793-15553.jpg" 
+                alt="Melo Açaí delivery" 
+                className="rounded-xl shadow-xl w-full h-[450px] object-cover"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white py-3 px-5 rounded-xl shadow-lg text-gray-800">
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="bg-[#EA1D2C] text-white text-xs px-2 py-1 rounded-md">iFood</div>
+                  <div className="font-bold">FRETE GRÁTIS</div>
+                </div>
+                <p className="text-sm">No seu primeiro pedido pelo app</p>
+              </div>
             </div>
           </div>
         </div>

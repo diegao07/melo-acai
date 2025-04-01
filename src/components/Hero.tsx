@@ -1,20 +1,23 @@
 
-import { ArrowRight } from 'lucide-react';
+import { ShoppingBag, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="pt-28 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-purple-50 to-white"
+      className="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-secondary to-white"
     >
-      <div className="acai-container">
+      <div className="melo-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">
-              O melhor açaí da cidade agora no iFood!
+            <span className="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+              100% Artesanal
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
+              O verdadeiro sabor do <span className="text-primary">açaí</span> amazônico
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8">
-              Experimente a verdadeira essência do açaí amazônico, com sabor intenso e textura cremosa. Peça agora mesmo pelo iFood!
+            <p className="text-lg text-gray-600 mb-8">
+              Experimente o melhor açaí artesanal da cidade, feito com ingredientes frescos e selecionados. Peça agora pelo iFood!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
@@ -23,27 +26,30 @@ const Hero = () => {
                 target="_blank"
                 rel="noreferrer"
               >
+                <ShoppingBag size={18} />
                 <span>Pedir no iFood</span>
-                <ArrowRight size={18} />
               </a>
-              <a href="#produtos" className="btn-primary">
-                Ver Produtos
+              <a href="#produtos" className="btn-outline">
+                Ver Cardápio <ArrowRight size={18} />
               </a>
             </div>
           </div>
           <div className="animate-fade-in" style={{animationDelay: '0.4s'}}>
             <div className="relative">
               <img 
-                src="https://img.freepik.com/free-photo/acai-bowl-with-strawberries-blueberries-bananas-chia-seeds_123827-21593.jpg" 
-                alt="Açaí bowl com frutas" 
-                className="rounded-xl shadow-xl w-full h-[400px] object-cover"
+                src="https://img.freepik.com/free-photo/acai-bowl-with-strawberries-bananas-blueberries-chia-seeds_123827-21593.jpg" 
+                alt="Melo Açaí bowl com frutas" 
+                className="rounded-2xl shadow-xl w-full h-[450px] object-cover"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-white py-3 px-5 rounded-xl shadow-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-[#EA1D2C] font-bold">iFood</span>
-                  <span className="bg-green-500 text-white text-xs px-2 py-1 rounded-full">4.9 ★</span>
+                  <div className="flex items-center">
+                    <span className="text-yellow-500">★★★★★</span>
+                    <span className="ml-1 font-medium">4.9</span>
+                  </div>
                 </div>
-                <p className="font-semibold">Entrega em até 30 minutos!</p>
+                <p className="font-medium text-gray-800">Entrega em até 30 min</p>
               </div>
             </div>
           </div>

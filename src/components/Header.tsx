@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingBag } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,18 +27,19 @@ const Header = () => {
         isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
       }`}
     >
-      <div className="acai-container flex justify-between items-center">
+      <div className="melo-container flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-primary">
-            <span className="text-accent">Açaí</span>-ify
+          <h1 className="text-2xl font-bold">
+            <span className="text-primary">Melo</span> Açaí
           </h1>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           <a href="#inicio" className="font-medium hover:text-primary transition-colors">Início</a>
           <a href="#produtos" className="font-medium hover:text-primary transition-colors">Produtos</a>
           <a href="#diferenciais" className="font-medium hover:text-primary transition-colors">Diferenciais</a>
+          <a href="#depoimentos" className="font-medium hover:text-primary transition-colors">Depoimentos</a>
           <a href="#pedido" className="font-medium hover:text-primary transition-colors">Pedido</a>
           <a 
             href="https://www.ifood.com.br"
@@ -46,6 +47,7 @@ const Header = () => {
             rel="noreferrer"
             className="btn-ifood"
           >
+            <ShoppingBag size={18} />
             Pedir no iFood
           </a>
         </nav>
@@ -85,6 +87,13 @@ const Header = () => {
               Diferenciais
             </a>
             <a 
+              href="#depoimentos" 
+              className="font-medium hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Depoimentos
+            </a>
+            <a 
               href="#pedido" 
               className="font-medium hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
@@ -95,9 +104,10 @@ const Header = () => {
               href="https://www.ifood.com.br"
               target="_blank"
               rel="noreferrer"
-              className="btn-ifood w-full"
+              className="btn-ifood"
               onClick={() => setIsMenuOpen(false)}
             >
+              <ShoppingBag size={18} />
               Pedir no iFood
             </a>
           </div>

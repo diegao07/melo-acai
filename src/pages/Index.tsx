@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Products from '@/components/Products';
 import Benefits from '@/components/Benefits';
 import OrderSection from '@/components/OrderSection';
+import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -22,10 +23,10 @@ const Index = () => {
 
   useEffect(() => {
     // Update page title and meta description
-    document.title = 'Açaí-ify | O melhor açaí no iFood';
+    document.title = 'Melo Açaí | O melhor açaí artesanal';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'O melhor açaí da cidade, agora disponível para entrega pelo iFood! Experimente nosso açaí amazônico puro e natural.');
+      metaDescription.setAttribute('content', 'Melo Açaí - O verdadeiro sabor do açaí artesanal, disponível para entrega pelo iFood!');
     }
   }, []);
 
@@ -36,6 +37,7 @@ const Index = () => {
         <Hero />
         <Products />
         <Benefits />
+        <Testimonials />
         <OrderSection />
       </main>
       <Footer />
