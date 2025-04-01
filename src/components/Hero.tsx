@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section 
       id="inicio" 
-      className="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-secondary to-white"
+      className="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-purple-light/20 via-secondary to-white"
     >
       <div className="melo-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -14,7 +14,7 @@ const Hero = () => {
               100% Artesanal
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4">
-              O verdadeiro sabor do <span className="text-primary">açaí</span> amazônico
+              O verdadeiro sabor do <span className="purple-gradient">açaí</span> amazônico
             </h1>
             <p className="text-lg text-gray-600 mb-8">
               Experimente o melhor açaí artesanal da cidade, feito com ingredientes frescos e selecionados. Peça agora pelo iFood!
@@ -36,12 +36,13 @@ const Hero = () => {
           </div>
           <div className="animate-fade-in" style={{animationDelay: '0.4s'}}>
             <div className="relative">
+              <div className="absolute -inset-0.5 bg-purple/30 rounded-2xl blur-xl animate-pulse-purple"></div>
               <img 
                 src="https://img.freepik.com/free-photo/acai-bowl-with-strawberries-bananas-blueberries-chia-seeds_123827-21593.jpg" 
                 alt="Melo Açaí bowl com frutas" 
-                className="rounded-2xl shadow-xl w-full h-[450px] object-cover"
+                className="rounded-2xl shadow-xl w-full h-[450px] object-cover relative z-10 purple-glow"
               />
-              <div className="absolute -bottom-6 -right-6 bg-white py-3 px-5 rounded-xl shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-white py-3 px-5 rounded-xl shadow-lg z-20 border border-purple-light/20">
                 <div className="flex items-center gap-2">
                   <span className="text-[#EA1D2C] font-bold">iFood</span>
                   <div className="flex items-center">
